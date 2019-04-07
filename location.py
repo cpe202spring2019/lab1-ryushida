@@ -8,6 +8,20 @@ class Location:
         self.lon = lon      # longitude in degrees (-180 to 180)
 
 # ADD BOILERPLATE HERE (__eq__ and __repr__ functions)
+    def __repr__(self):
+        return "Location(\'" + self.name + "\', " +  str(self.lat) + ", " + str(self.lon) + ")"
+
+# Output without repr
+# Location 1: <__main__.Location object at 0x7f33e81846d8>
+# Location 2: <__main__.Location object at 0x7f33e814e9e8>
+# Location 3: <__main__.Location object at 0x7f33e814ea20>
+# Location 4: <__main__.Location object at 0x7f33e81846d8>
+
+# Output with repr
+# Location 1: Location('SLO', 35.3, -120.7)
+# Location 2: Location('Paris', 48.9, 2.4)
+# Location 3: Location('SLO', 35.3, -120.7)
+# Location 4: Location('SLO', 35.3, -120.7)
 
 def main():
     loc1 = Location("SLO", 35.3, -120.7)
