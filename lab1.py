@@ -40,4 +40,16 @@ def bin_search(target, low, high, int_list):  # must use recursion
 
    if int_list is None:
       raise ValueError()
+   else:
+      # Get index of middle of list (round down)
+      middle = int((low + high)/2)
+      if target == int_list[middle]:
+         return middle
+      # If target is larger than the middle item
+      elif target > int_list[middle]:
+         # Do binary search with 2nd half of list
+         return bin_search(target, middle+1, high, int_list)
+      else:
+         # Do binary search with 1st half of list
+         return bin_search(target, low, middle-1, int_list)
    pass
