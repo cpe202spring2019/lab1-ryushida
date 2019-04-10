@@ -18,6 +18,17 @@ def max_list_iter(int_list):  # must use iteration not recursion
 def reverse_rec(int_list):   # must use recursion
    """recursively reverses a list of numbers and returns the reversed list
    If list is None, raises ValueError"""
+   length = len(int_list)
+   
+   if None in int_list:
+      raise ValueError()
+   elif length <= 1:
+      return int_list
+   else:
+      tmp = int_list[:length-1]
+      #print(tmp)
+      first = int_list[length-1]
+      return [first] + reverse_rec(tmp)
    pass
 
 def bin_search(target, low, high, int_list):  # must use recursion
