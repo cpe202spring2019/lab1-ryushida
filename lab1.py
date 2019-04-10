@@ -5,7 +5,6 @@ def max_list_iter(int_list):  # must use iteration not recursion
 
    if int_list is None:
       raise ValueError()
-      return None
    elif len(int_list) == 0:
       return None
    else:
